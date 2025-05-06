@@ -10,7 +10,7 @@ const ContainerPage = ( {children,className} : containerProps) => {
     <div className={cn ("mx-auto px-4 md:px-8 py-8 container w-full",className)}>
         {children}
         
-      continer
+      
     </div>
   )
 }

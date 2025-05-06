@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -112,9 +115,17 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6),
+      /* Top-left */ 1px -1px 0 rgba(0, 0, 0, 0.6),
+      /* Top-right */ -1px 1px 0 rgba(0, 0, 0, 0.6),
+      /* Bottom-left */ 1px 1px 0 rgba(0, 0, 0, 0.6); /* Bottom-right */
   }
 }
